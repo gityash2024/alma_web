@@ -10,7 +10,7 @@ import OurMonthbyMonth_2 from '../assets/images/OurMonthbyMonth_2.png';
 import OurMonthbyMonth_3 from '../assets/images/OurMonthbyMonth_3.png';
 import albert_flores from '../assets/images/albert_flores.svg';
 import contactlogo from '../assets/images/contactlogo.png';
-import Contactus from '../assets/images/Contactus.svg';
+import Contactus from '../assets/images/contactus.svg';
 import questionMark from '../assets/images/questionMark.svg';
 
 const AboutPage: React.FC = () => {

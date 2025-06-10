@@ -8,7 +8,7 @@ import OurMonthbyMonth_3 from '../assets/images/OurMonthbyMonth_3.png';
 import OurMonthbyMonth_4 from '../assets/images/OurMonthbyMonth_4.png';
 import OurMonthbyMonth_5 from '../assets/images/OurMonthbyMonth_5.png';
 import OurMonthbyMonth_6 from '../assets/images/OurMonthbyMonth_6.png';
-import Contactus from '../assets/images/Contactus.svg';
+import Contactus from '../assets/images/contactus.svg';
 import contactlogo from '../assets/images/contactlogo.png';
 import OurMonthbyMonth from '../assets/images/OurMonthbyMonth.png'
 import img_1 from '../assets/images/img_1.jpg';

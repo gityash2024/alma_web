@@ -14,7 +14,7 @@ import TrustedPartners_10 from '../assets/images/TrustedPartners_10.svg';
 import TrustedPartners_11 from '../assets/images/TrustedPartners_11.svg';
 import TrustedPartners_12 from '../assets/images/TrustedPartners_12.svg';
 import albert_flores from '../assets/images/albert_flores.svg';
-import Contactus from '../assets/images/Contactus.svg';
+import Contactus from '../assets/images/contactus.svg';
 import questionMark from '../assets/images/questionMark.svg';
 
 const HomePageThree = () => {

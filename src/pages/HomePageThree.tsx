@@ -3,7 +3,7 @@ import '../styles/pages/HomePageThree.scss';
 
 // Renamed for clarity based on likely usage
 import CardBackgroundSVG from '../assets/images/contactus.svg'; // Assuming this is the full card background SVG
-import ContactMainIconSVG from '../assets/images/Contactus.svg'; // Assuming this is the main circular phone icon SVG
+import ContactMainIconSVG from '../assets/images/contactus.svg'; // Assuming this is the main circular phone icon SVG
 
 // Other imports (trusted partners, testimonials, etc.)
 import TrustedPartners_1 from '../assets/images/TrustedPartners_1.svg';

@@ -8,11 +8,11 @@ import IgniteImpact from '../assets/images/IgniteImpact.png';
 import DriveChange from '../assets/images/DriveChange.png';
 import EveryRupeeCounts from '../assets/images/EveryRupeeCounts.png';
 import albert_flores from '../assets/images/albert_flores.svg';
-import Contactus from '../assets/images/Contactus.svg'; 
+import Contactus from '../assets/images/contactus.svg'; 
 import contactlogo from '../assets/images/contactlogo.png';
 import questionMark from '../assets/images/questionMark.svg';
 import BeAnAlly from '../assets/images/BeAnAlly.png';
-import ContactMainIconSVG from '../assets/images/Contactus.svg';
+import ContactMainIconSVG from '../assets/images/contactus.svg';
 const DonatePage: React.FC = () => {
   const [donationAmount, setDonationAmount] = useState(100);
   const [selectedAmount, setSelectedAmount] = useState<number | null>(null);
