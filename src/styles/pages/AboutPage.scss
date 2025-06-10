@@ -1,0 +1,1569 @@
+@import '../_scss-variables.scss';
+@import '../mixins.scss';
+
+.about-page-container {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* First Section - We Are Change Makers */
+.change-makers-section {
+  padding: 0; // Remove padding to make full width
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0;
+  }
+}
+
+.change-makers-background {
+  margin-top: -60px;
+  background: linear-gradient(180.25deg, #FFD941 21.12%, #FFFFFF 80.33%);
+  border-radius: 0 0 80px 80px;
+  padding: 120px 60px 80px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  // Wave design elements
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: -200px;
+    width: 600px;
+    height: 600px;
+    background: linear-gradient(180deg, #F8E38B 0%, #FFFFFF 100%);
+    border-radius: 50% 40% 60% 50%;
+    opacity: 0.6;
+    z-index: 1;
+    transform: rotate(-15deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 150px;
+    right: -300px;
+    width: 800px;
+    height: 800px;
+    background: linear-gradient(180deg, #F8E38B 0%, #FFFFFF 100%);
+    border-radius: 60% 30% 50% 40%;
+    opacity: 0.4;
+    z-index: 1;
+    transform: rotate(25deg);
+  }
+
+  @media (max-width: 768px) {
+    padding: 100px 40px 60px;
+    min-height: 90vh;
+    border-radius: 0 0 60px 60px;
+
+    &::before {
+      width: 400px;
+      height: 400px;
+      left: -150px;
+      top: 50px;
+    }
+
+    &::after {
+      width: 500px;
+      height: 500px;
+      right: -200px;
+      bottom: 100px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 80px 30px 50px;
+    min-height: 85vh;
+    border-radius: 0 0 40px 40px;
+
+    &::before {
+      width: 300px;
+      height: 300px;
+      left: -100px;
+      top: 30px;
+    }
+
+    &::after {
+      width: 350px;
+      height: 350px;
+      right: -150px;
+      bottom: 80px;
+    }
+  }
+}
+
+.change-makers-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.change-makers-text-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-bottom: 80px;
+  padding: 0 20px;
+  
+  .change-makers-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #2D3748;
+    margin: 0 0 40px 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+
+    @media (max-width: 768px) {
+      font-size: 3.5rem;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+    }
+  }
+
+  .change-makers-description {
+    font-size: 1.25rem;
+    color: #4A5568;
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: 1.125rem;
+      max-width: 600px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+  }
+}
+
+.change-makers-image-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+}
+
+.change-makers-group-image {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+
+  @media (max-width: 768px) {
+    height: 320px;
+    max-width: 700px;
+    border-radius: 24px;
+  }
+
+  @media (max-width: 480px) {
+    height: 280px;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+}
+
+
+/* Second Section - About Our Founder */
+.founder-section {
+  padding: 80px 40px;
+  background: #fff;
+  font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+}
+
+.founder-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.founder-card {
+  background: linear-gradient(90deg, rgba(142, 68, 173, 0.24) 0%, rgba(232, 188, 13, 0.24) 100%);
+  border-radius: 32px;
+  padding: 60px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 40px 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 20px;
+  }
+}
+
+.founder-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  @media (max-width: 1024px) {
+    gap: 40px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+}
+
+.founder-text {
+  flex: 1;
+}
+
+.founder-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-family: 'Mona Sans', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.75rem;
+  }
+}
+
+.founder-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4A5568;
+  margin: 0 0 20px 0;
+  line-height: 1.3;
+  font-family: 'Mona Sans', sans-serif;
+}
+
+.founder-description {
+  font-size: 1rem;
+  color: #4A5568;
+  margin: 0 0 30px 0;
+  line-height: 1.6;
+  font-family: 'Mona Sans', sans-serif;
+}
+
+.founder-explore-btn {
+  padding: 16px 32px;
+  background: #2D3748;
+  color: white;
+  border: none;
+  border-radius: 21px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Mona Sans', sans-serif;
+
+  &:hover {
+    background: #1A202C;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(45, 55, 72, 0.3);
+  }
+}
+
+.founder-image-container {
+  flex: 0 0 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    flex: none;
+  }
+}
+
+.founder-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto; // Remove fixed height to preserve natural proportions
+  object-fit: contain; // Change from cover to contain to show full image
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    max-width: 350px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 300px;
+  }
+}
+
+/* Third Section - Movement & Volunteer */
+.movement-section {
+  padding: 80px 40px;
+  background: #fff;
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+}
+
+.movement-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movement-content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+
+  @media (max-width: 1024px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.movement-images-overlap {
+  flex: 1;
+  position: relative;
+  width: 500px;
+  height: 400px;
+  margin-right: 60px;
+
+  @media (max-width: 768px) {
+    margin: 0 auto 40px auto;
+    width: 350px;
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+.image-container-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 200px;
+  transform: rotate(-5deg);
+  z-index: 1;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: rotate(-5deg) translateY(-5px);
+  }
+
+  @media (max-width: 768px) {
+    width: 220px;
+    height: 160px;
+  }
+
+  @media (max-width: 480px) {
+    width: 190px;
+    height: 140px;
+  }
+}
+
+.image-container-2 {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 280px;
+  height: 200px;
+  transform: rotate(8deg);
+  z-index: 2;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: rotate(8deg) translateY(-5px);
+  }
+
+  @media (max-width: 768px) {
+    width: 220px;
+    height: 160px;
+    top: 40px;
+  }
+
+  @media (max-width: 480px) {
+    width: 190px;
+    height: 140px;
+    top: 35px;
+  }
+}
+
+.image-container-3 {
+  position: absolute;
+  bottom: 0;
+  left: 60px;
+  width: 280px;
+  height: 200px;
+  transform: rotate(-2deg);
+  z-index: 3;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: rotate(-2deg) translateY(-5px);
+  }
+
+  @media (max-width: 768px) {
+    width: 220px;
+    height: 160px;
+    left: 45px;
+  }
+
+  @media (max-width: 480px) {
+    width: 190px;
+    height: 140px;
+    left: 35px;
+  }
+}
+
+.movement-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movement-text {
+  flex: 1;
+  max-width: 500px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.movement-description {
+  font-size: 1.5rem;
+  color: #3F3F46;
+  margin: 0 0 30px 0;
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: 'Mona Sans';
+
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
+}
+
+.movement-volunteer-btn {
+  padding: 16px 32px;
+  background: #303030;
+  color: white;
+  border: none;
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Mona Sans';
+
+  &:hover {
+    background: #1A202C;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(45, 55, 72, 0.3);
+  }
+
+  &:focus {
+    outline: 2px solid #4299e1;
+    outline-offset: 2px;
+  }
+}
+
+
+/* Fourth Section - We Believe In & Our History */
+.beliefs-history-section {
+  padding: 80px 40px;
+  background: #fff;
+  position: relative;
+  font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  // Left side shadow
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(90deg, var(--Yellow-200, #FBECB2) 0%, transparent 100%);
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  // Right side shadow
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    background: linear-gradient(270deg, var(--Purple-200, #D3B2E1) 0%, transparent 100%);
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+    
+    &::before,
+    &::after {
+      width: 100px;
+    }
+  }
+}
+
+.beliefs-history-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* We Believe In */
+.beliefs-section {
+  margin-bottom: 80px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.beliefs-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin: 0 0 60px 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-family: 'Mona Sans', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.875rem;
+  }
+}
+
+.beliefs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.belief-card {
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 25px;
+  }
+}
+
+.compassion-card {
+  background: #D3B2E1;
+}
+
+.equality-card {
+  background: #FFC2B4;
+}
+
+.collaboration-card {
+  background: #FFBBBB;
+}
+
+.sustainability-card {
+  background: #F8E38B;
+}
+
+.belief-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.belief-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin: 0 0 16px 0;
+  font-family: 'Mona Sans', sans-serif;
+}
+
+.belief-description {
+  font-size: 0.95rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Mona Sans', sans-serif;
+}
+
+/* Our History */
+/* Our History */
+.history-section {
+  background: linear-gradient(90deg, rgba(142, 68, 173, 0.24) 0%, rgba(232, 188, 13, 0.24) 100%);
+  border-radius: 32px;
+  padding: 60px;
+  overflow: hidden;
+  font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  @media (max-width: 768px) {
+    padding: 40px 30px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 20px;
+  }
+}
+
+.history-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin: 0 0 50px 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+  font-family: 'Mona Sans', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.875rem;
+  }
+}
+
+.history-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+.history-item {
+  text-align: left;
+}
+
+.history-year {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2D3748;
+  margin-bottom: 12px;
+  position: relative;
+  font-family: 'Mona Sans', sans-serif;
+
+  &::after {
+    content: '';
+    width: 201px;
+    height: 3px;
+    background: #2D3748;
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+.history-content p {
+  font-size: 1rem;
+  color: #4A5568;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'Mona Sans', sans-serif;
+}
+
+/* New Sections Below History - Testimonials */
+.testimonials-section-new {
+  padding: 80px 40px;
+  background: #ffffff;
+  font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+
+  // Small purple shadow on bottom left
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    background: var(--Purple-200, #D3B2E1);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.4;
+    filter: blur(40px);
+    transform: translate(-50%, 50%);
+
+    @media (max-width: 768px) {
+      width: 200px;
+      height: 150px;
+    }
+  }
+
+  // Small yellow shadow on bottom right
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 200px;
+    background: var(--Yellow-200, #FBECB2);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.4;
+    filter: blur(40px);
+    transform: translate(50%, 50%);
+
+    @media (max-width: 768px) {
+      width: 200px;
+      height: 150px;
+    }
+  }
+}
+
+.testimonials-container-new {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 60px;
+  // box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+
+  @media (max-width: 768px) {
+    padding: 40px 20px;
+  }
+}
+
+.testimonials-content-new {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  margin-bottom: 60px;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+}
+
+.testimonial-text-new {
+  flex: 1;
+  position: relative;
+
+  .quote-icon-new {
+    font-size: 4rem;
+    color: #9d7fb5;
+    margin-bottom: 30px;
+    line-height: 1;
+    font-family: Georgia, serif;
+  }
+
+  .testimonial-quote-main {
+    font-size: 1.75rem;
+    color: #2D3748;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+    font-weight: 600;
+    font-family: 'Mona Sans', sans-serif;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .testimonial-quote-sub {
+    font-size: 1rem;
+    color: #4A5568;
+    margin: 0 0 40px 0;
+    line-height: 1.6;
+    font-style: italic;
+    font-family: 'Mona Sans', sans-serif;
+  }
+
+  .testimonial-author-new {
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #2D3748;
+      margin: 0 0 5px 0;
+      font-family: 'Mona Sans', sans-serif;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #4A5568;
+      margin: 0;
+      font-family: 'Mona Sans', sans-serif;
+    }
+  }
+}
+
+.testimonial-image-container-new {
+  flex: 0 0 400px;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    flex: none;
+  }
+
+  .testimonial-image-new {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
+}
+
+.testimonials-navigation-new {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+
+  .nav-btn-new {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Mona Sans', sans-serif;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    &:hover {
+      background: #f7fafc;
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    &.prev-btn-new {
+      svg {
+        color: #718096;
+      }
+    }
+
+    &.next-btn-new {
+      background: #2D3748;
+      border-color: #2D3748;
+
+      svg {
+        color: #ffffff;
+      }
+
+      &:hover {
+        background: #1A202C;
+        border-color: #1A202C;
+      }
+    }
+  }
+}
+
+/* New Section - Contact Us */
+.contact-section-new {
+  padding: 80px 40px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+  }
+
+  // Top left purple shadow
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    background: var(--Purple-200, #D3B2E1);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.3;
+    filter: blur(60px);
+    transform: translate(-50%, -50%);
+
+    @media (max-width: 768px) {
+      width: 300px;
+      height: 200px;
+    }
+  }
+
+  // Top right yellow shadow
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 300px;
+    background: var(--Yellow-200, #FBECB2);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0.3;
+    filter: blur(60px);
+    transform: translate(50%, -50%);
+
+    @media (max-width: 768px) {
+      width: 300px;
+      height: 200px;
+    }
+  }
+}
+
+.contact-container-new {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card-new {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  min-height: 280px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    min-height: 240px;
+  }
+
+  // Remove all pseudo-elements since we're using the background image
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+
+.contact-icon-new {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 3;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+  }
+
+  img {
+    width: 35px;
+    height: 35px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(15%) saturate(1015%) hue-rotate(183deg) brightness(95%) contrast(89%);
+
+    @media (max-width: 768px) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+
+.contact-content-new {
+  position: relative;
+  z-index: 2;
+  padding: 40px 40px 40px 130px;
+
+  @media (max-width: 768px) {
+    padding: 30px 25px 30px 100px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 25px 20px 25px 90px;
+  }
+
+  .contact-title-new {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2D3748;
+    margin: 0 0 12px 0;
+    line-height: 1.2;
+    font-family: 'Mona Sans', sans-serif;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .contact-description-new {
+    font-size: 0.95rem;
+    color: #4A5568;
+    margin: 0 0 28px 0;
+    line-height: 1.5;
+    font-family: 'Mona Sans', sans-serif;
+    max-width: 550px;
+
+    @media (max-width: 768px) {
+      font-size: 0.85rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  .contact-details-new {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .contact-item-new {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: #2D3748;
+      font-weight: 500;
+      font-family: 'Mona Sans', sans-serif;
+
+      @media (max-width: 768px) {
+        font-size: 0.85rem;
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        color: #2D3748;
+
+        @media (max-width: 768px) {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      span {
+        font-family: 'Mona Sans', sans-serif;
+      }
+    }
+  }
+}
+
+/* New Section - FAQ */
+/* FAQ Section SCSS */
+// .faq-section-new {
+//   padding: 80px 40px;
+//   background: #ffffff;
+//   font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+//   @media (max-width: 768px) {
+//     padding: 60px 20px;
+//   }
+// }
+
+// .faq-container-new {
+//   max-width: 1000px;
+//   margin: 0 auto;
+//   padding: 0 20px;
+// }
+
+// .faq-content-box {
+//   background: linear-gradient(90deg, rgba(142, 68, 173, 0.24) 0%, rgba(232, 188, 13, 0.24) 100%);
+//   width: 900px;
+//   max-width: 100%;
+//   height: auto;
+//   min-height: 651px;
+//   border-radius: 36px;
+//   gap: 40px;
+//   padding-top: 44px;
+//   padding-bottom: 44px;
+//   padding-left: 60px;
+//   padding-right: 60px;
+//   position: relative;
+//   margin: 0 auto;
+//   display: flex;
+//   flex-direction: column;
+
+//   @media (max-width: 960px) {
+//     width: calc(100% - 40px);
+//     margin: 0 20px;
+//   }
+
+//   @media (max-width: 768px) {
+//     width: calc(100% - 20px);
+//     min-height: 500px;
+//     padding: 30px 25px;
+//     border-radius: 24px;
+//     margin: 0 10px;
+//   }
+
+//   @media (max-width: 480px) {
+//     padding: 25px 20px;
+//     border-radius: 20px;
+//     min-height: 400px;
+//     margin: 0 5px;
+//   }
+// }
+
+// .faq-header-new {
+//   text-align: center;
+//   margin-bottom: 40px;
+//   flex-shrink: 0;
+
+//   .faq-icon-new {
+//     width: 100px;
+//     height: 100px;
+//     background: #ffffff;
+//     border: 3px solid rgba(0, 0, 0, 0.1);
+//     border-radius: 50%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     margin: -100px auto 24px auto;
+//     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+//     position: relative;
+//     z-index: 2;
+
+//     @media (max-width: 768px) {
+//       width: 80px;
+//       height: 80px;
+//       margin-bottom: 20px;
+//     }
+
+//     img {
+//       width: 40px;
+//       height: 40px;
+
+//       @media (max-width: 768px) {
+//         width: 30px;
+//         height: 30px;
+//       }
+//     }
+//   }
+
+//   h2 {
+//     font-family: 'Mona Sans', sans-serif;
+//     font-weight: 600;
+//     font-size: 36px;
+//     line-height: 52px;
+//     letter-spacing: 0%;
+//     text-align: center;
+//     color: #2D3748;
+//     margin: 0 0 12px 0;
+
+//     @media (max-width: 768px) {
+//       font-size: 28px;
+//       line-height: 40px;
+//     }
+
+//     @media (max-width: 480px) {
+//       font-size: 24px;
+//       line-height: 36px;
+//     }
+//   }
+
+//   p {
+//     font-size: 1.125rem;
+//     color: #4A5568;
+//     margin: 0;
+//     font-family: 'Mona Sans', sans-serif;
+//     font-weight: 400;
+
+//     @media (max-width: 768px) {
+//       font-size: 1rem;
+//     }
+//   }
+// }
+
+// .faq-list-new {
+//   background: transparent;
+//   border-radius: 0;
+//   overflow: visible;
+//   box-shadow: none;
+//   flex: 1;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 0;
+// }
+
+// .faq-item-new {
+//   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+//   transition: all 0.3s ease;
+//   background: transparent;
+
+//   &:last-child {
+//     border-bottom: none;
+//   }
+
+//   .faq-question-new {
+//     width: 100%;
+//     padding: 32px 0;
+//     background: none;
+//     border: none;
+//     text-align: left;
+//     cursor: pointer;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     font-size: 1.125rem;
+//     font-weight: 500;
+//     color: #2D3748;
+//     transition: all 0.3s ease;
+//     font-family: 'Mona Sans', sans-serif;
+
+//     &:hover {
+//       background: rgba(255, 255, 255, 0.1);
+//       border-radius: 8px;
+//       padding-left: 16px;
+//       padding-right: 16px;
+//     }
+
+//     &:focus {
+//       outline: none;
+//       background: rgba(255, 255, 255, 0.15);
+//       border-radius: 8px;
+//       padding-left: 16px;
+//       padding-right: 16px;
+//     }
+
+//     @media (max-width: 768px) {
+//       padding: 24px 0;
+//       font-size: 1rem;
+//     }
+
+//     @media (max-width: 480px) {
+//       padding: 20px 0;
+//       font-size: 0.95rem;
+//     }
+
+//     span {
+//       flex: 1;
+//       text-align: left;
+//       line-height: 1.4;
+//     }
+
+//     .faq-toggle-new {
+//       width: 36px;
+//       height: 36px;
+//       border-radius: 50%;
+//       background: rgba(255, 255, 255, 0.8);
+//       border: 1px solid rgba(0, 0, 0, 0.1);
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       transition: all 0.3s ease;
+//       flex-shrink: 0;
+//       font-size: 20px;
+//       font-weight: 700;
+//       color: #2D3748;
+//       margin-left: 20px;
+
+//       @media (max-width: 768px) {
+//         width: 32px;
+//         height: 32px;
+//         font-size: 18px;
+//         margin-left: 15px;
+//       }
+//     }
+//   }
+
+//   .faq-answer-new {
+//     max-height: 0;
+//     overflow: hidden;
+//     transition: max-height 0.4s ease, padding 0.4s ease;
+//     color: #4A5568;
+//     line-height: 1.6;
+//     font-family: 'Mona Sans', sans-serif;
+
+//     &.show {
+//       max-height: 200px;
+//       padding-bottom: 24px;
+
+//       @media (max-width: 768px) {
+//         padding-bottom: 20px;
+//       }
+
+//       @media (max-width: 480px) {
+//         padding-bottom: 18px;
+//       }
+//     }
+
+//     p {
+//       margin: 0;
+//       font-size: 1rem;
+//       font-weight: 400;
+
+//       @media (max-width: 768px) {
+//         font-size: 0.9rem;
+//       }
+//     }
+//   }
+
+//   &.active {
+//     .faq-question-new .faq-toggle-new {
+//       background: #2D3748;
+//       border-color: #2D3748;
+//       color: #ffffff;
+//     }
+//   }
+
+
+.faq-section {
+    width: 1280px;
+    height: 750px;
+    margin: 0 auto;
+    padding: 80px 0 40px 0; // Increased top padding to accommodate the icon
+    background: linear-gradient(135deg, rgba(196, 181, 253, 0.4) 0%, rgba(254, 240, 138, 0.4) 100%);
+    border-radius: 40px 40px 40px 40px;
+    
+    .faq-header {
+        text-align: center;
+        margin-bottom: 60px;
+        
+        .faq-icon {
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto; // Changed from negative margin to positive
+            
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #1a202c;
+            margin: 0 0 12px 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            letter-spacing: -0.025em;
+        }
+        
+        p {
+            font-size: 16px;
+            color: #718096;
+            margin: 0;
+            font-weight: 400;
+        }
+    }
+    
+    .faq-list {
+        padding: 0px 100px 80px 100px;
+        width: 100%;
+        background: transparent;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .faq-item {
+        border-bottom: none;
+        
+        &:not(:last-child) {
+            border-bottom: 1px solid #101011;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 28px 32px;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #0d0d0e;
+            transition: all 0.3s ease;
+            font-family: system-ui, -apple-system, sans-serif;
+            
+            .faq-toggle {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                flex-shrink: 0;
+                border: 1px solid #e2e8f0;
+                
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    color: #4a5568;
+                }
+            }
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            
+            &.show {
+                max-height: 180px;
+            }
+            
+            p {
+                padding: 0 32px 28px 32px;
+                color: #0c0c0c;
+                line-height: 1.6;
+                margin: 0;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+        
+        &.active {
+            .faq-question .faq-toggle {
+                background: #2d3748;
+                border-color: #2d3748;
+                
+                svg {
+                    color: white;
+                }
+            }
+        }
+        
+        .faq-divider {
+            display: none;
+        }
+    }
+}
+// Animations
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+

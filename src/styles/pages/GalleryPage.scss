@@ -1,0 +1,397 @@
+@import '../_scss-variables.scss';
+@import '../mixins.scss';
+
+.gallery-page {
+  min-height: 100vh;
+  
+  .gallery-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+  }
+  
+  // New Header Section with image background only
+  .gallery-header-new {
+    margin-top: 0;
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    padding-top: 20px;
+    
+    @media (max-width: 768px) {
+      height: 45vh;
+      padding-top: 15px;
+    }
+    
+    .header-background {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      // background-position: top center;
+      background-repeat: no-repeat;
+      position: relative;
+      // border-radius: 0 0 60px 60px;
+      
+      @media (max-width: 768px) {
+        border-radius: 0 0 40px 40px;
+        height: 70vh;
+      }
+    }
+  }
+  
+  // Original Header Section (kept as fallback/alternative)
+  .gallery-header {
+    border-radius: 50px 50px 0 0;
+    margin-top: 50px;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin: 0 -20px;
+    
+    @media (max-width: 768px) {
+      margin: 0 -16px;
+      height: 50vh;
+    }
+    
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      z-index: 2;
+      position: relative;
+      
+      h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 24px;
+        font-family: system-ui, -apple-system, sans-serif;
+        letter-spacing: -0.025em;
+        line-height: 1.2;
+        
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+        }
+        
+        @media (max-width: 480px) {
+          font-size: 2rem;
+        }
+      }
+      
+      p {
+        font-size: 1.25rem;
+        color: #4a5568;
+        font-weight: 400;
+        line-height: 1.6;
+        margin: 0;
+        
+        @media (max-width: 768px) {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+  
+  // Gallery Albums Section
+  .gallery-albums {
+    padding: 80px 40px;
+    // background: #ffffff;
+    margin-top: -100px;
+    position: relative;
+    z-index: 10;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -100px;
+    
+    @media (max-width: 768px) {
+      padding: 60px 20px;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 40px 16px;
+    }
+    
+    .albums-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+    
+    .album-card {
+      background: #ffffff;
+      border-radius: 0;
+      overflow: visible;
+      
+      .album-images {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+        
+        .main-image {
+          img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 16px;
+          }
+        }
+        
+        .side-images {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          
+          .small-image {
+            img {
+              width: 100%;
+              height: 134px;
+              object-fit: cover;
+              border-radius: 16px;
+            }
+          }
+        }
+      }
+      
+      .album-info {
+        padding: 0;
+        
+        h3 {
+          font-size: 1.75rem;
+          font-weight: 700;
+          color: #2d3748;
+          margin-bottom: 8px;
+          font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        p {
+          font-size: 1rem;
+          color: #718096;
+          margin-bottom: 20px;
+          font-weight: 400;
+          font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .view-album-btn {
+          background: #2d3748;
+          color: #ffffff;
+          border: none;
+          padding: 12px 32px;
+          border-radius: 30px;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          
+          &:hover {
+            background: #1a202c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(45, 55, 72, 0.3);
+          }
+          
+          &:active {
+            transform: translateY(0);
+          }
+        }
+      }
+      
+      // Expanded Photos
+      .expanded-photos {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 2px solid #e2e8f0;
+        
+        .photos-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 16px;
+          
+          .photo-item {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            
+            &:hover {
+              transform: scale(1.05);
+            }
+            
+            img {
+              width: 100%;
+              height: 150px;
+              object-fit: cover;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Contact Section  
+  .gallery-contact {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 40px;
+    margin: 0;
+    position: relative;
+    border-radius: 60px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    @media (max-width: 768px) {
+      margin: 0;
+      padding: 40px 20px;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 30px 16px;
+    }
+    
+    .contact-card {
+      border-radius: 32px;
+      padding: 50px 60px;
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding: 40px 30px;
+        margin: 0 20px;
+      }
+      
+      @media (max-width: 480px) {
+        margin: 0 16px;
+        padding: 30px 20px;
+      }
+      
+      // Decorative circles
+      &::before {
+        content: '';
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        z-index: 1;
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -80px;
+        right: 80px;
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 50%;
+        z-index: 1;
+      }
+      
+      .contact-icon {
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        z-index: 2;
+        position: relative;
+        
+        img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+      
+      .contact-content {
+        flex: 1;
+        z-index: 2;
+        position: relative;
+        
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #2d3748;
+          margin-bottom: 16px;
+          font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          letter-spacing: -0.025em;
+          
+          @media (max-width: 768px) {
+            font-size: 2rem;
+          }
+        }
+        
+        p {
+          font-size: 1.125rem;
+          color: #4a5568;
+          line-height: 1.6;
+          margin-bottom: 32px;
+          max-width: 600px;
+          font-weight: 400;
+          font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .contact-details {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          
+          .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: #2d3748;
+            font-weight: 500;
+            font-size: 1.125rem;
+            font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            
+            @media (max-width: 768px) {
+              justify-content: center;
+            }
+            
+            svg {
+              width: 24px;
+              height: 24px;
+              flex-shrink: 0;
+            }
+            
+            span {
+              font-family: 'Mona Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            }
+          }
+        }
+      }
+    }
+  }
+}

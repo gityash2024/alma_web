@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Icon Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .icon-test {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100px;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 10px;
+        }
+        .facebook { background-image: url('/images/icons/facebook.svg'); }
+        .twitter { background-image: url('/images/icons/twitter.svg'); }
+        .instagram { background-image: url('/images/icons/instagram.svg'); }
+        .linkedin { background-image: url('/images/icons/linkedin.svg'); }
+        .clock { background-image: url('/images/icons/clock.svg'); }
+        .location { background-image: url('/images/icons/location.svg'); }
+    </style>
+</head>
+<body>
+    <h1>SVG Icon Test</h1>
+    <p>This page tests if the SVG icons are being served correctly.</p>
+    
+    <div class="icon-test">
+        <div class="icon-item">
+            <div class="icon facebook"></div>
+            <span>Facebook</span>
+        </div>
+        <div class="icon-item">
+            <div class="icon twitter"></div>
+            <span>Twitter</span>
+        </div>
+        <div class="icon-item">
+            <div class="icon instagram"></div>
+            <span>Instagram</span>
+        </div>
+        <div class="icon-item">
+            <div class="icon linkedin"></div>
+            <span>LinkedIn</span>
+        </div>
+        <div class="icon-item">
+            <div class="icon clock"></div>
+            <span>Clock</span>
+        </div>
+        <div class="icon-item">
+            <div class="icon location"></div>
+            <span>Location</span>
+        </div>
+    </div>
+</body>
+</html> 

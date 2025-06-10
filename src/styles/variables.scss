@@ -1,0 +1,62 @@
+/* Color Variables */
+:root {
+  /* Primary color based on the Figma design (purple) */
+  --color-primary: #7b68ee;
+  --color-primary-light: #9e8ff5;
+  --color-primary-dark: #584dbd;
+  
+  /* Secondary colors based on sections in the design */
+  --color-secondary-yellow: #ffdb58;
+  --color-secondary-pink: #ffb6c1;
+  --color-secondary-teal: #4fd1c5;
+  
+  /* Background colors */
+  --color-background: #ffffff;
+  --color-background-light: #f8f9fa;
+  --color-background-dark: #e9ecef;
+  
+  /* Text colors */
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-text-dark: #111111;
+  --color-heading: #222222;
+  
+  /* Border and shadow colors */
+  --color-border: #dddddd;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* Success, warning, error colors */
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-error: #dc3545;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* Border radius */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 16px;
+  --radius-round: 50%;
+  
+  /* Container widths */
+  --container-max-width: 1200px;
+  --container-narrow-max-width: 960px;
+  
+  /* Transitions */
+  --transition-speed: 0.3s;
+  --transition-function: ease;
+  
+  /* Z-index layers */
+  --z-index-dropdown: 100;
+  --z-index-sticky: 200;
+  --z-index-fixed: 300;
+  --z-index-modal-backdrop: 400;
+  --z-index-modal: 500;
+  --z-index-tooltip: 600;
+}

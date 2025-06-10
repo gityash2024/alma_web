@@ -1,0 +1,45 @@
+@import '../styles/_scss-variables.scss';
+@import '../styles/mixins.scss';
+
+.not-found-page {
+  min-height: 60vh;
+  @include flex-center;
+  padding: 60px 20px;
+  
+  .not-found-content {
+    text-align: center;
+    max-width: 500px;
+    
+    h1 {
+      font-size: 8rem;
+      font-weight: 700;
+      color: $primary-color;
+      margin-bottom: 10px;
+      line-height: 1;
+      
+      @include respond-to('mobile') {
+        font-size: 6rem;
+      }
+    }
+    
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: $heading-color;
+      
+      @include respond-to('mobile') {
+        font-size: 2rem;
+      }
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: $text-color-light;
+      margin-bottom: 30px;
+    }
+    
+    .primary-button {
+      display: inline-block;
+    }
+  }
+} 
