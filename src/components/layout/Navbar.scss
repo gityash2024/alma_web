@@ -1,8 +1,11 @@
 .navbar {
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1000;
 
   .navbar-container {
@@ -13,6 +16,12 @@
     display: grid;
     grid-template-columns: 200px 1fr 200px;
     align-items: center;
+
+    @media (max-width: 768px) {
+      grid-template-columns: auto 1fr auto;
+      gap: 20px;
+      padding: 12px 20px;
+    }
   }
 
   .navbar-logo {
@@ -21,6 +30,10 @@
     svg {
       height: 50px;
       width: auto;
+
+      @media (max-width: 768px) {
+        height: 40px;
+      }
     }
   }
 
@@ -44,7 +57,6 @@
         padding: 10px 0;
         display: block;
 
-        // Underline effect
         &::after {
           content: '';
           position: absolute;
@@ -64,11 +76,10 @@
           }
         }
 
-        // Active state - only underline, no background
         &.active {
           font-weight: 600;
           color: #000;
-          background: none !important; // Remove any background
+          background: none !important;
           
           &::after {
             width: 100%;
@@ -78,16 +89,79 @@
         }
       }
     }
+
+    @media (max-width: 768px) {
+      position: fixed;
+      top: 83px;
+      right: -100%;
+      width: 100%;
+      max-width: 350px;
+      height: calc(100vh - 83px);
+      background: #ffffff;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      gap: 0;
+      padding: 0;
+      box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+      transition: right 0.3s ease;
+      overflow-y: auto;
+      z-index: 1001;
+
+      &.nav-menu-open {
+        right: 0;
+      }
+
+      .nav-item {
+        border-bottom: 1px solid #f0f0f0;
+
+        &:first-child {
+          border-top: 1px solid #f0f0f0;
+        }
+
+        .nav-link {
+          padding: 20px 30px;
+          font-size: 16px;
+          font-weight: 500;
+          color: #000;
+          border-bottom: none;
+          text-decoration: none;
+          display: block;
+          width: 100%;
+
+          &::after {
+            display: none;
+          }
+
+          &:hover {
+            background-color: #f8f9fa;
+            color: #000;
+          }
+
+          &.active {
+            background-color: #000 !important;
+            color: #ffffff !important;
+            font-weight: 600;
+
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 
   .menu-icon {
     justify-self: end;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 18px;
     height: 14px;
     cursor: pointer;
+    position: relative;
+    z-index: 1001;
 
     span {
       display: block;
@@ -95,18 +169,61 @@
       background-color: #000;
       border-radius: 1px;
       transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+    }
+
+    &.menu-icon-open {
+      span {
+        &:nth-child(1) {
+          transform: rotate(45deg) translateY(6px);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+          transform: scale(0);
+        }
+
+        &:nth-child(3) {
+          transform: rotate(-45deg) translateY(-6px);
+        }
+      }
+    }
+
+    &:hover span,
+    &:focus span {
+      background-color: #000;
     }
   }
 
-  // Mobile responsive
-  @media (max-width: 768px) {
-    .navbar-container {
-      grid-template-columns: auto 1fr auto;
-      gap: 20px;
+  .menu-overlay {
+    position: fixed;
+    top: 83px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 83px);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    @media (max-width: 768px) {
+      opacity: 1;
+      visibility: visible;
     }
-    
-    .nav-menu {
-      display: none; // Hide menu on mobile
+
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-menu:not(.nav-menu-open) {
+      right: -100%;
     }
   }
 }

@@ -10,9 +10,11 @@ import HomePageThree from './HomePageThree';
 import purplecard from '../assets/images/purplecard.svg';
 import yellow from '../assets/images/yellow.svg';
 import mission from '../assets/images/mission.svg';
+import { useNavigate } from 'react-router-dom';
 
 
 const HomePage: React.FC = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [playingVideos, setPlayingVideos] = useState<Set<number>>(new Set());
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -76,7 +78,7 @@ const HomePage: React.FC = () => {
               <h1>Reshaping Tomorrow</h1>
               <p>Great futures are built with a small change.</p>
               <div className="donate-button-container">
-                <button className="donate-button">Donate Now</button>
+                <button onClick={() =>{navigate('/donate')}} className="donate-button">Donate Now</button>
               </div>
             </div>
             

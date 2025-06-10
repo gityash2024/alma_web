@@ -4,6 +4,7 @@
 .about-page-container {
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden; // Prevent horizontal scroll
 }
 
 /* First Section - We Are Change Makers */
@@ -67,9 +68,10 @@
   }
 
   @media (max-width: 768px) {
-    padding: 100px 40px 60px;
+    padding: 100px 20px 60px;
     min-height: 90vh;
     border-radius: 0 0 60px 60px;
+    margin-top: -40px;
 
     &::before {
       width: 400px;
@@ -87,9 +89,10 @@
   }
 
   @media (max-width: 480px) {
-    padding: 80px 30px 50px;
+    padding: 80px 16px 50px;
     min-height: 85vh;
     border-radius: 0 0 40px 40px;
+    margin-top: -20px;
 
     &::before {
       width: 300px;
@@ -117,6 +120,15 @@
   text-align: center;
   max-width: 1200px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    max-width: 95%;
+    padding: 0 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 12px;
+  }
 }
 
 .change-makers-text-content {
@@ -125,6 +137,16 @@
   text-align: center;
   margin-bottom: 80px;
   padding: 0 20px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+    padding: 0 16px;
+  }
+
+  @media (max-width: 480px) {
+    margin-bottom: 40px;
+    padding: 0 12px;
+  }
   
   .change-makers-title {
     font-size: 4.5rem;
@@ -142,6 +164,7 @@
     @media (max-width: 480px) {
       font-size: 2.8rem;
       margin-bottom: 25px;
+      line-height: 1.2;
     }
   }
 
@@ -161,6 +184,7 @@
     @media (max-width: 480px) {
       font-size: 1rem;
       max-width: 100%;
+      line-height: 1.6;
     }
   }
 }
@@ -171,6 +195,14 @@
   width: 100%;
   position: relative;
   z-index: 3;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 12px;
+  }
 }
 
 .change-makers-group-image {

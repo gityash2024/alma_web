@@ -11,6 +11,10 @@
     @media (max-width: 768px) {
       padding: 0 20px;
     }
+
+    @media (max-width: 480px) {
+      padding: 0 16px;
+    }
   }
   
   .footer-content {
@@ -26,20 +30,46 @@
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: 40px;
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: 480px) {
+      gap: 30px;
+      padding-bottom: 30px;
     }
   }
   
   // Brand Section
   .footer-brand {
+    @media (max-width: 768px) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
     .footer-logo {
       display: flex;
       align-items: center;
       gap: 12px;
       margin-bottom: 20px;
+
+      @media (max-width: 768px) {
+        justify-content: center;
+        margin-bottom: 16px;
+      }
       
       .logo-icon {
         width: 50px;
         height: 50px;
+
+        @media (max-width: 768px) {
+          width: 45px;
+          height: 45px;
+        }
+
+        @media (max-width: 480px) {
+          width: 40px;
+          height: 40px;
+        }
         
         svg {
           width: 100%;
@@ -52,6 +82,14 @@
         font-weight: 700;
         color: #2d3748;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+        @media (max-width: 768px) {
+          font-size: 22px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 20px;
+        }
       }
     }
     
@@ -61,11 +99,32 @@
       color: #718096;
       margin: 0 0 30px 0;
       max-width: 300px;
+
+      @media (max-width: 768px) {
+        max-width: none;
+        text-align: center;
+        margin: 0 auto 25px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
     }
     
     .footer-social {
       display: flex;
       gap: 16px;
+
+      @media (max-width: 768px) {
+        justify-content: center;
+        gap: 20px;
+      }
+
+      @media (max-width: 480px) {
+        gap: 16px;
+      }
       
       .social-link {
         text-decoration: none;
@@ -78,11 +137,21 @@
           align-items: center;
           justify-content: center;
           transition: all 0.3s ease;
+
+          @media (max-width: 480px) {
+            width: 36px;
+            height: 36px;
+          }
           
           svg {
             width: 18px;
             height: 18px;
             color: white;
+
+            @media (max-width: 480px) {
+              width: 16px;
+              height: 16px;
+            }
           }
           
           &:hover {
@@ -139,16 +208,33 @@
     
     @media (max-width: 480px) {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 25px;
     }
     
     .footer-column {
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+
+      @media (max-width: 480px) {
+        text-align: left;
+      }
+
       h3 {
         font-size: 16px;
         font-weight: 600;
         color: #2d3748;
         margin: 0 0 20px 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+        @media (max-width: 768px) {
+          margin-bottom: 16px;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 15px;
+          margin-bottom: 12px;
+        }
       }
       
       ul {
@@ -158,12 +244,20 @@
         
         li {
           margin-bottom: 12px;
+
+          @media (max-width: 480px) {
+            margin-bottom: 10px;
+          }
           
           a {
             font-size: 14px;
             color: #718096;
             text-decoration: none;
             transition: color 0.2s ease;
+
+            @media (max-width: 480px) {
+              font-size: 13px;
+            }
             
             &:hover {
               color: #4a5568;
@@ -186,12 +280,22 @@
       flex-direction: column;
       gap: 16px;
       text-align: center;
+      padding: 16px 0;
+    }
+
+    @media (max-width: 480px) {
+      gap: 12px;
+      padding: 12px 0;
     }
     
     p {
       font-size: 14px;
       color: #a0aec0;
       margin: 0;
+
+      @media (max-width: 480px) {
+        font-size: 13px;
+      }
     }
     
     .footer-bottom-links {
@@ -200,6 +304,8 @@
       
       @media (max-width: 480px) {
         gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       
       a {
@@ -207,6 +313,10 @@
         color: #a0aec0;
         text-decoration: none;
         transition: color 0.2s ease;
+
+        @media (max-width: 480px) {
+          font-size: 13px;
+        }
         
         &:hover {
           color: #718096;
