@@ -1,0 +1,157 @@
+@import '../_scss-variables.scss';
+@import '../mixins.scss';
+
+.legal-page {
+  padding: 4rem 0;
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  .last-updated {
+    text-align: center;
+    font-style: italic;
+    color: $text-color-light;
+    margin-bottom: 3rem;
+  }
+
+  .legal-section {
+    margin-bottom: 2.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: $text-color;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid $border-color;
+      padding-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      color: $text-color;
+      margin: 1.5rem 0 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      color: $text-color;
+    }
+
+    ul, ol {
+      margin: 1rem 0 1.5rem 1.5rem;
+
+      li {
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+        color: $text-color;
+      }
+    }
+
+    address {
+      line-height: 1.6;
+      color: $text-color;
+      font-style: normal;
+      background-color: $light-bg;
+      padding: 1.5rem;
+      border-radius: $border-radius;
+      display: inline-block;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: darken($primary-color, 10%);
+        text-decoration: underline;
+      }
+    }
+
+    .cookies-table-wrapper {
+      overflow-x: auto;
+      margin: 1.5rem 0;
+    }
+
+    .cookies-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+
+      th, td {
+        padding: 0.8rem;
+        text-align: left;
+        border-bottom: 1px solid $border-color;
+      }
+
+      th {
+        background-color: $light-bg;
+        font-weight: 600;
+        color: $text-color;
+      }
+
+      tr:nth-child(even) {
+        background-color: rgba($light-bg, 0.4);
+      }
+
+      tr:hover {
+        background-color: rgba($light-bg, 0.7);
+      }
+    }
+  }
+
+  // Specific styles for each legal page type
+  &.privacy-policy {
+    .legal-section {
+      h2 {
+        color: $primary-color;
+      }
+    }
+  }
+
+  &.terms {
+    .legal-section {
+      h2 {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &.cookies {
+    .legal-section {
+      h2 {
+        color: $accent-color;
+      }
+    }
+  }
+
+  @include respond-to('medium') {
+    h1 {
+      font-size: 3rem;
+    }
+
+    .legal-section {
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+} 

@@ -3,7 +3,7 @@
 
 .home-page {
   // White background for the entire page initially
-  background: #ffffff;
+   background: linear-gradient(135deg,  #fdf8f0 0%,  #fdf8f0 0%);
   min-height: 100vh;
   max-width: 100vw;
   margin-top: -20px;
@@ -11,13 +11,14 @@
 
   // Reshaping Tomorrow Section - White background with yellow shadow behind text
   .reshaping-section {
-    padding: 80px 20px;
-    background: #ffffff; // Clean white background
+    padding: 80px 0px 0px 0px;
+    background: linear-gradient(135deg, #fdf8f0 0%, #fdf8f0 0%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    margin-bottom: 90px;
 
     @media (max-width: 768px) {
       padding: 60px 16px 40px;
@@ -143,10 +144,10 @@
       }
     }
 
-    .cards-container {
+     .cards-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 10px; // REDUCED GAP SLIGHTLY from 15px to 10px
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 20px;
@@ -156,6 +157,7 @@
       @media (max-width: 1200px) {
         flex-wrap: wrap;
         justify-content: center;
+        // Consider adjusting padding here too if needed, e.g., padding: 0 10px;
       }
 
       @media (max-width: 768px) {
@@ -171,12 +173,12 @@
       }
 
       .card {
+        box-sizing: border-box; // ADD THIS LINE for consistent sizing
         overflow: hidden;
         padding: 35px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         min-height: 280px;
         flex: 1;
@@ -184,7 +186,6 @@
 
         &:hover {
           transform: translateY(-5px);
-          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
 
         @media (max-width: 768px) {
@@ -205,49 +206,43 @@
         }
 
         &.purple-card {
+         background-image: url('/assets/images/purplecard.svg');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-position: center;
           color: white;
-          border-radius: 20px 50px 40px 40px;
-          max-width: 280px;
-          min-width: 240px;
-          max-height: 300px;
+          border-radius: 40px 45px 45px 40px;
+          max-width: 290px;
+          min-width: 250px;
+          max-height: 340px;
+          min-height: 300px;
+          margin-top: -40px;
+          padding: 60px 40px 40px 40px;
 
           @media (max-width: 768px) {
-            border-radius: 20px;
-            max-height: none;
+            max-width: 100%;
+            min-height: 280px;
           }
 
           h2 {
-            font-size: 3rem;
-            margin-top: -30px;
+            font-size: 2.5rem;
+            margin-top: -20px;
             font-weight: 500;
-
-            @media (max-width: 768px) {
-              font-size: 2.5rem;
-              margin-top: 0;
-            }
-
-            @media (max-width: 480px) {
-              font-size: 2rem;
-            }
+            color: #f0e6ff;
           }
 
           p {
-            font-size: 1rem;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
             line-height: 1.4;
             opacity: 0.95;
-
-            @media (max-width: 768px) {
-              font-size: 0.95rem;
-              line-height: 1.6;
-            }
           }
         }
 
         &.image-card {
           padding: 0;
           position: relative;
-          border-radius: 40px 40px 40px 80px;
+          border-radius: 40px 40px 40px 40px;
           max-width: 300px;
           min-width: 260px;
           margin-top: 70px;
@@ -261,7 +256,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 30px 80px 30px 30px;
+            border-radius: 30px 30px 30px 30px;
 
             @media (max-width: 768px) {
               border-radius: 20px;
@@ -278,7 +273,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            background:linear-gradient(transparent, rgba(0, 0, 0, 0.8));
             padding: 25px;
             border-radius: 0 0 30px 30px;
 
@@ -311,7 +306,7 @@
         &.image-card-second {
           padding: 0;
           position: relative;
-          border-radius: 40px 40px 80px 40px;
+          border-radius: 40px 40px 40px 40px;
           max-width: 280px;
           min-width: 240px;
           margin-top: 70px;
@@ -325,7 +320,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 40px 40px 80px 40px;
+            border-radius: 40px 40px 40px 40px;
 
             @media (max-width: 768px) {
               border-radius: 20px;
@@ -339,7 +334,7 @@
         }
 
         &.pink-card {
-          background: linear-gradient(135deg, rgba(248, 229, 240, 0.9), rgba(240, 214, 230, 0.9));
+          background: linear-gradient(135deg,#8E44AD3D,#E8BC0D3D);
           border-radius: 40px 40px 40px 40px;
           max-width: 280px;
           min-width: 240px;
@@ -374,10 +369,17 @@
         }
 
         &.yellow-card {
-          border-radius: 50px 20px 50px 50px;
-          max-width: 320px;
-          min-width: 280px;
-          max-height: 300px;
+          background-image: url('/assets/images/yellow.svg');
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          border-radius: 40px 45px 45px 40px;
+          max-width: 290px;
+          min-width: 250px;
+          max-height: 340px;
+          min-height: 300px;
+          margin-top: -40px;
+          padding: 60px 40px 40px 40px;
 
           @media (max-width: 768px) {
             border-radius: 20px;
@@ -516,8 +518,8 @@
 
   // Our Mission Section - White background with reduced spacing
   .mission-section {
-    padding: 40px 20px 100px; // Reduced top padding
-    background: #ffffff; // White background for entire section
+    padding: 0px 0px 0px; // Reduced top padding
+    background: linear-gradient(135deg,  #ffffff 0%,  #fdf8f0 0%);
     position: relative;
     overflow: hidden;
 
@@ -534,7 +536,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 520px;
+      height: 550px;
       background-image: url('/assets/images/mission.svg');
       background-size: cover;
       background-repeat: no-repeat;
@@ -646,7 +648,7 @@
 
     .video-slider {
       max-width: 1200px;
-      margin: 120px auto 0; // Increased top margin to prevent overlap
+      margin: 200px auto 0; // Increased top margin to prevent overlap
       position: relative;
       z-index: 1;
 

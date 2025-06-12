@@ -1,0 +1,173 @@
+/* Responsive mixins */
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "mobile-small" {
+    @media (max-width: 375px) { @content; }
+  }
+  @else if $breakpoint == "mobile" {
+    @media (max-width: 576px) { @content; }
+  }
+  @else if $breakpoint == "tablet" {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $breakpoint == "laptop" {
+    @media (max-width: 992px) { @content; }
+  }
+  @else if $breakpoint == "desktop" {
+    @media (max-width: 1200px) { @content; }
+  }
+  @else if $breakpoint == "desktop-large" {
+    @media (min-width: 1201px) { @content; }
+  }
+}
+
+/* Flexbox mixins */
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid mixins */
+@mixin grid-columns($columns, $gap: 20px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+/* Typography mixins */
+@mixin heading-1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  
+  @include respond-to('tablet') {
+    font-size: 2.25rem;
+  }
+  
+  @include respond-to('mobile') {
+    font-size: 2rem;
+  }
+}
+
+@mixin heading-2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  
+  @include respond-to('tablet') {
+    font-size: 1.75rem;
+  }
+  
+  @include respond-to('mobile') {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin heading-3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  
+  @include respond-to('mobile') {
+    font-size: 1.25rem;
+  }
+}
+
+@mixin body-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+@mixin small-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* UI element mixins */
+@mixin card-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-m);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin hover-lift {
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@mixin focus-outline {
+  &:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+}
+
+@mixin button-reset {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Animation mixins */
+@mixin fade-in {
+  animation: fadeIn 0.5s ease forwards;
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+@mixin slide-in-up {
+  animation: slideInUp 0.5s ease forwards;
+  
+  @keyframes slideInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
